@@ -1,0 +1,9 @@
+/* Allow page layout to go full-width when sidebar is disabled */
+.VPPage {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.VPDoc.has-sidebar {
+  padding-left: 0 !important;
+}

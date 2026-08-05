@@ -1,0 +1,122 @@
+:root {
+  /* Cosmic Midnight Palette */
+  --vp-c-bg: #07090e;
+  --vp-c-bg-alt: #0a0d16;
+  --vp-c-bg-elv: #0f1422;
+  --vp-c-bg-soft: rgba(255, 255, 255, 0.03);
+
+  /* Primary Accent: Violet / Secondary Accent: Cyan */
+  --vp-c-brand-1: #7c5cff;
+  --vp-c-brand-2: #59c4ff;
+  --vp-c-brand-3: #a78bfa;
+  --vp-c-brand-soft: rgba(124, 92, 255, 0.14);
+
+  /* Typography */
+  --vp-c-text-1: #f3f4f6;
+  --vp-c-text-2: #9ca3af;
+  --vp-c-text-3: #6b7280;
+
+  /* Borders & Dividers */
+  --vp-c-border: rgba(255, 255, 255, 0.08);
+  --vp-c-divider: rgba(255, 255, 255, 0.06);
+  --vp-c-gutter: rgba(255, 255, 255, 0.05);
+
+  /* Sidebar & Header Customizations */
+  --vp-nav-bg-color: rgba(7, 9, 14, 0.75);
+  --vp-sidebar-bg-color: rgba(7, 9, 14, 0.5);
+  --vp-code-block-bg: #0b0f19;
+}
+
+/* Force dark theme defaults everywhere */
+html,
+body {
+  background-color: var(--vp-c-bg) !important;
+  color: var(--vp-c-text-1);
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Header */
+.VPNav {
+  background-color: var(--vp-nav-bg-color) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid var(--vp-c-border) !important;
+}
+
+/* Glassmorphism Sidebar */
+.VPSidebar {
+  background-color: var(--vp-sidebar-bg-color) !important;
+  backdrop-filter: blur(12px);
+  border-right: 1px solid var(--vp-c-border) !important;
+}
+
+/* Sidebar Links Active Glow Effect */
+.VPSidebarItem.is-active > .item > .link {
+  color: var(--vp-c-brand-1) !important;
+  font-weight: 600;
+  position: relative;
+}
+
+.VPSidebarItem.is-active > .item > .link::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 16px;
+  background: linear-gradient(180deg, #7c5cff, #59c4ff);
+  border-radius: 4px;
+  box-shadow: 0 0 10px #7c5cff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07090e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 92, 255, 0.25);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 92, 255, 0.5);
+}
+
+/* Code Blocks Styling */
+.vp-doc div[class*="language-"] {
+  border: 1px solid var(--vp-c-border);
+  border-radius: 10px;
+  background-color: var(--vp-code-block-bg) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Custom Selection Highlight */
+::selection {
+  background: rgba(124, 92, 255, 0.35);
+  color: #ffffff;
+}
+
+/* Force VitePress page wrappers to be transparent so Starfield & MouseGlow show through */
+html,
+body,
+#app,
+.VPApp,
+.VPPage,
+.VPContent,
+.VPDoc,
+.VPContent-doc {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Base HTML background color (fallback behind canvas) */
+html {
+  background-color: #07090e !important;
+}
