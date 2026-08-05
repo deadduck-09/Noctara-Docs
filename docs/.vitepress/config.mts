@@ -6,6 +6,7 @@ export default defineConfig({
 
   lang: "en-US",
 
+  base: "/Noctara-Docs/",
   themeConfig: {
     logo: "/logo.png",
 
