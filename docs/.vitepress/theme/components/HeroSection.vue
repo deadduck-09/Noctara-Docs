@@ -1,13 +1,25 @@
 <template>
   <div class="hero-container">
     <div class="hero-content">
-      <img src="/logo.png" alt="Noctara Logo" class="hero-logo" />
+      <img :src="withBase('/logo.png')" alt="Noctara Logo" class="hero-logo" />
       <h1 class="hero-title hero-text">Noctara</h1>
-      <p class="hero-tagline hero-text">Modern desktop experience for Niri & Hyprland<br/>Because your desktop deserves better life choices.</p>
-      
+      <p class="hero-tagline hero-text">
+        Modern desktop experience for Niri & Hyprland<br />
+        Because your desktop deserves better life choices.
+      </p>
+
       <div class="hero-actions">
-        <a href="/getting-started/requirements" class="btn btn-primary">Get Started</a>
-        <a href="https://github.com/deadduck-09/noctara-dots" class="btn btn-alt">GitHub</a>
+        <a :href="withBase('/getting-started/requirements.html')" class="btn btn-primary">
+          Get Started
+        </a>
+        <a 
+          href="https://github.com/deadduck-09/noctara-dots" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn btn-alt"
+        >
+          GitHub
+        </a>
       </div>
     </div>
   </div>
@@ -15,34 +27,62 @@
 
 <script setup>
 import { onMounted } from 'vue'
+import { withBase } from 'vitepress'
 import { gsap } from 'gsap'
 
 onMounted(() => {
-  const mm = gsap.matchMedia();
-  
-  mm.add("(prefers-reduced-motion: no-preference)", () => {
-    const tl = gsap.timeline();
-    
+  const mm = gsap.matchMedia()
+
+  mm.add('(prefers-reduced-motion: no-preference)', () => {
+    const tl = gsap.timeline()
+
     // Initial Reveal
-    tl.fromTo('.hero-logo', { y: 30, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 1.2, ease: 'power4.out' })
-      .fromTo('.hero-text', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', stagger: 0.15 }, "-=0.8")
-      .fromTo('.hero-actions .btn', { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out', stagger: 0.1 }, "-=0.5");
+    tl.fromTo(
+      '.hero-logo',
+      { y: 30, opacity: 0, scale: 0.9 },
+      { y: 0, opacity: 1, scale: 1, duration: 1.2, ease: 'power4.out' }
+    )
+      .fromTo(
+        '.hero-text',
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', stagger: 0.15 },
+        '-=0.8'
+      )
+      .fromTo(
+        '.hero-actions .btn',
+        { y: 15, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out', stagger: 0.1 },
+        '-=0.5'
+      )
 
     // Continuous subtle float
-    gsap.to('.hero-logo', { y: -12, duration: 2.5, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 1.2 });
-  });
+    gsap.to('.hero-logo', {
+      y: -12,
+      duration: 2.5,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut',
+      delay: 1.2,
+    })
+  })
 })
 </script>
 
 <style scoped>
 .hero-container {
-  /* Reduced height & top padding to shift content upward */
   min-height: 65vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: calc(var(--vp-nav-height) + 1rem) 1.5rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-logo {
@@ -76,6 +116,8 @@ onMounted(() => {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  position: relative;
+  z-index: 10;
 }
 
 .btn {
@@ -84,6 +126,8 @@ onMounted(() => {
   font-weight: 600;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .btn:hover {
