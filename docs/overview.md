@@ -1,116 +1,67 @@
-# Introduction
+# Overview
 
 Welcome to **Noctara Dots** 🌙
 
-Noctara Dots is a collection of carefully organized desktop configurations designed to provide a beautiful, modern, and ready-to-use Wayland desktop experience.
+Noctara Dots is just my personal collection of Wayland configs. The main reason I put this together was simple: riceing your Linux desktop is supposed to be fun, not spending three hours at 2 AM trying to figure out which missing bracket broke your entire system.
 
-The idea behind Noctara Dots is simple: creating a great Linux desktop should be enjoyable, not a never-ending adventure through thousands of lines of configuration files while wondering why a single missing bracket broke your entire setup.
+It started as a small weekend project when I was messing around with **Niri** and **Noctalia Shell**. Before I knew it, I turned it into a full setup—window manager configs, terminal stuff, themes, keybinds, and random quality-of-life scripts I use every day.
 
-Noctara Dots started as a personal project while experimenting with **Niri** and **Noctalia Shell**. Over time, it grew into a complete desktop setup containing everything needed for a polished workflow: window manager configurations, shell customization, terminal setup, applications, themes, keybinds, scripts, and various quality-of-life improvements.
-
-The goal is not just to make a desktop look good, but to create an experience where everything feels connected. The terminal, applications, window manager, colors, animations, and workflow are designed to work together as one complete environment.
+Everything is tuned so the whole desktop actually matches. Your terminal, window borders, apps, and colors all use the same theme instead of looking like a random mashup of dotfiles.
 
 ---
 
-# Why Noctara Dots?
+## Why I made this
 
-When I first started using Niri with Noctalia, I was impressed by how customizable and visually appealing the shell was. However, I quickly realized that creating a complete desktop experience required much more than just configuring the shell.
+When I first tried Niri with Noctalia, I thought it looked amazing, but I quickly realized having a pretty status bar doesn't mean you have a usable setup.
 
-The shell could be customized, but many other parts of the system still needed to be built from scratch.
+Since I was still learning window managers, I had to spend days figuring out:
 
-As someone who was still learning window managers, I had to figure out things like:
+- How to structure configs without making a total mess
+- Keybinds and window rules that don't constantly break
+- Making random apps actually follow my system dark mode
+- Fixing random broken shell scripts
 
-- How to structure a clean window manager configuration
-- How to configure keybinds and window rules
-- How to make applications match the overall theme
-- How to customize terminals and command-line tools
+Breaking stuff was a good way to learn, but staring at black screens and error logs gets annoying fast. I made Noctara Dots to give people a clean base so you don't have to start from absolute zero.
 
-The process was honestly one of the best ways to learn, but it also required a lot of searching, testing, breaking things, and occasionally staring at an error message wondering what humanity did to deserve configuration files.
-
-That experience is what inspired Noctara Dots.
-
-The purpose of this project is to provide a starting point for users who want a beautiful Noctalia-based desktop without having to spend days collecting random configurations from different places.
-
-Instead of installing a shell and then building everything around it manually, Noctara Dots provides a complete foundation:
-
-- Install it
-- Understand the structure
-- Customize what you want
-- Enjoy the desktop
-
-The configs are still meant to be explored and modified. This project is not about hiding complexity, but about making the learning process smoother.
+> **TL;DR:** Clone it, look at how it works, tweak whatever you want, and actually use your computer.
 
 ---
 
-# Built Around Customization
+## Make it yours
 
-Linux customization is one of the things that makes the platform special. Everyone has a different workflow, preferred applications, and personal style.
+Linux is all about customizing stuff anyway, so I didn't lock anything down. Everything is split into separate files instead of one giant 2,000-line config file:
 
-Because of that, Noctara Dots is designed with customization in mind.
+- **Window Managers:** Separated into their own folders
+- **Themes:** Grouped by app so they're easy to find
+- **Scripts:** Kept in a dedicated folder
+- **Docs:** Short guides on how things link together
 
-The configurations are organized into separate modules wherever possible, making it easier to understand and modify individual parts without digging through one massive configuration file.
-
-Instead of having one giant file containing everything, Noctara Dots tries to keep things clean:
-
-- Window manager settings are separated
-- Themes are organized
-- Application configurations are grouped
-- Custom scripts have their own place
-- Documentation explains how everything connects
-
-The goal is to make the setup approachable for beginners while still being flexible enough for experienced users.
+It's simple enough if you're new to this, but easy to strip apart if you want to rebuild it your own way.
 
 ---
 
-# Multiple Window Managers
+## Multiple Window Managers
 
-The Linux desktop community has many amazing window managers, each with its own unique workflow and philosophy.
-
-Some users enjoy the simplicity and unique workflow of tiling window managers like Niri. Others prefer the flexibility and animations of Hyprland, or want to experiment with different Wayland compositors.
-
-Trying different window managers is part of what makes Linux customization fun. Every compositor gives you a different way to interact with your computer, and discovering those differences is a big part of the experience.
-
-That is why Noctara Dots is not limited to a single environment.
-
-By supporting multiple window managers, the project can reach more users while keeping the same overall design philosophy:
-
-**A clean, modern, customizable desktop experience that feels complete from the moment you start using it.**
+I get bored easily and like switching things up, so this isn't locked to just one compositor. Whether you like the scrollable layout in **Niri**, the animations in **Hyprland**, or testing out **MangoWM**, the setup keeps the exact same theme and feel across all of them.
 
 ---
 
-# What Noctara Dots Is Not
+## What this isn't
 
-Noctara Dots is not meant to be a replacement for the projects it uses.
+Just to be clear: I didn't invent any of this from scratch. This project relies on awesome open-source tools like Wayland, Noctalia Shell, and a bunch of CLI apps.
 
-It is built on top of incredible open-source projects like:
-
-- Wayland compositors
-- Noctalia Shell
-- Terminal tools
-- Linux customization utilities
-
-The goal is to combine these tools into a cohesive setup and make them easier to approach.
-
-Noctara Dots is also not a completely finished "one-click forever setup." Configurations evolve, tools change, and improvements are always being made. Linux moves quickly because apparently sitting still for five minutes would be too easy.
-
-Expect changes, experiments, and continuous improvements as the project grows.
+It's also definitely not a "perfect forever" setup. Linux tools change fast, so expect bugs to get fixed, random experiments, and updates whenever I tweak my setup.
 
 ---
 
-# The Philosophy
+## The idea behind it
 
-Noctara Dots follows a simple idea:
+> _A desktop shouldn't just look cool, it should actually feel like yours._
 
-> A desktop should not only work well, it should feel like yours.
+Whether you're coding, studying, listening to music, or just opening a terminal to flex your neofetch, your setup should be comfortable to use.
 
-A good setup is not just about having fancy effects or a beautiful wallpaper. It is about creating an environment that makes daily tasks enjoyable.
+Because honestly:
 
-Whether you are coding, studying, browsing, listening to music, or simply opening your terminal for no reason other than enjoying your carefully crafted prompt, your desktop should feel comfortable.
+> **Your desktop deserves better life choices. ✌️**
 
-Noctara Dots is an attempt to create that experience while sharing the journey with others.
-
-Because afterall
-
-> Your Desktop deserves better life choices ✌️
-
-Welcome to the setup. 🌙
+Hope you like the setup! 🌙

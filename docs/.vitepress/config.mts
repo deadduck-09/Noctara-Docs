@@ -58,6 +58,7 @@ export default defineConfig({
         items: [
           { text: "Wallpapers", link: "/customization/wallpapers" },
           { text: "Icons", link: "/customization/icons" },
+          { text: "Focus Mode", link: "/customization/focus-mode" },
           { text: "Noctalia", link: "/customization/noctalia-changes" },
         ],
       },
@@ -79,7 +80,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/deadduck-09/noctara-dots",
+        link: "https://github.com/deadduck-09",
       },
       {
         icon: "youtube",

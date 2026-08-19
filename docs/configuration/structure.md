@@ -119,17 +119,17 @@ If you want to customize a specific application, simply open its corresponding f
 Explore the configuration guide for each supported window manager.
 
 <div class="wm-grid">
-  <a href="/configuration/window-managers/niri" class="wm-card">
+  <a href="./window-managers/niri" class="wm-card">
     <div class="title">Niri</div>
     <div class="desc">Scrollable tiling window manager configuration.</div>
   </a>
 
-  <a href="/configuration/window-managers/hyprland" class="wm-card">
+  <a href="./window-managers/hyprland" class="wm-card">
     <div class="title">Hyprland</div>
     <div class="desc">Dynamic Wayland compositor configuration.</div>
   </a>
 
-  <a href="/configuration/window-managers/mango" class="wm-card">
+  <a href="./window-managers/mango" class="wm-card">
     <div class="title">MangoWM</div>
     <div class="desc">MangoWM configuration and customization.</div>
   </a>
